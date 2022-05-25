@@ -1,22 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/assets/styles/sass/style.scss">
+    <script defer src="./node_modules/bootstrap/js/src/offcanvas.js" 
+    type="module"></script>
+    <script defer src="./node_modules/bootstrap/js/src/collapse.js" type="module"></script>
     <link rel="icon" href="./src/assets/img/favicon.ico">
-    <title></title>
+    <title>QuickFuelPrice</title>
 </head>
+
 <body>
-    <header>
-
+    <header class="">
+        <nav class="navbar bg-header">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex gap-3 align-items-center flex-fill" href="#">
+                    <img src="./src/assets/img/QuickFuelPrice.png" alt="QuickFullPrice" width="50"
+                        class="d-inline-block align-text-top">
+                    <h1 class="text-white m-0">QuickFuelPrice</h1>
+                    <i class="bi bi-funnel text-white ms-auto" data-bs-toggle="offcanvas" data-bs-target="#filters"
+                        aria-controls="filters">Filtros</i>
+                </a>
+            </div>
+        </nav>
     </header>
-    <main>
-
+    <main class="container">
+        <aside class="offcanvas offcanvas-start" tabindex="-1" id="filters" aria-labelledby="filters">
+            <div class="offcanvas-header bg-header">
+                <h5 class="offcanvas-title text-white" id="filters">Filtros</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    <div>
+                        <h5>Provincia</h5>
+                    </div>
+                    <div class="col-8 my-3">
+                        <select class="form-select" name="gender" id="genre">
+                            <option value="">Todas las Provincias</option>
+                            <option value="Alava">Álava</option>
+                            <option value="Albacete">Albacete</option>
+                            <option value="Alicante">Alicante</option>
+                            <option value="Almeria">Almería</option>
+                            <option value="Asturias">Asturias</option>
+                            <option value="Avila">Ávila</option>
+                            <option value="Badajoz">Badajoz</option>
+                            <option value="Barcelona">Barcelona</option>
+                            <option value="Burgos">Burgos</option>
+                            <option value="Caceres">Cáceres</option>
+                            <option value="Cadiz">Cádiz</option>
+                            <option value="Cantabria">Cantabria</option>
+                            <option value="Castellon">Castellón</option>
+                            <option value="Ciudad Real">Ciudad Real</option>
+                            <option value="Cordoba">Córdoba</option>
+                            <option value="Cuenca">Cuenca</option>
+                            <option value="Gerona">Gerona</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Guadalajara">Guadalajara</option>
+                            <option value="Guipuzcoa">Guipúzcoa</option>
+                            <option value="Huelva">Huelva</option>
+                            <option value="Huesca">Huesca</option>
+                            <option value="Jaen">Jaén</option>
+                            <option value="La Coruña">La Coruña</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Leon">León</option>
+                            <option value="Lerida">Lérida</option>
+                            <option value="Lugo">Lugo</option>
+                            <option value="Madrid">Madrid</option>
+                            <option value="Malaga">Málaga</option>
+                            <option value="Murcia">Murcia</option>
+                            <option value="Navarra">Navarra</option>
+                            <option value="Caceres">Cáceres</option>
+                            <option value="Orense">Orense</option>
+                            <option value="Caceres">Cáceres</option>
+                            <option value="Palencia">Palencia</option>
+                            <option value="Pontevedra">Pontevedra</option>
+                            <option value="Salamanca">Salamanca</option>
+                            <option value="Segovia">Segovia</option>
+                            <option value="Sevilla">Sevilla</option>
+                            <option value="Soria">Soria</option>
+                            <option value="Tarragona">Tarragona</option>
+                            <option value="Teruel">Teruel</option>
+                            <option value="Toledo">Toledo</option>
+                            <option value="Valencia">Valencia</option>
+                            <option value="Valladolid">Valladolid</option>
+                            <option value="Vizcaya">Vizcaya</option>
+                            <option value="Zamora">Zamora</option>
+                            <option value="Zaragoza">Zaragoza</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <h5>Combustibles</h5>
+                </div>
+                <div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Bioiesel</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Bioetanol</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gas Natural Comprimido</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gas Natural Licuado</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gasoleo A</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gasoleo B</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gasoleo Premium</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gasolina 95 E5</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gasolina 95 E5 Premium</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gasolina 95 E10</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gasolina 98 E5</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Gasolina 98 E10</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Hidrógeno</label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <h3 class="my-3">Estaciones de servicio</h3>
+            <article class="d-flex flex-fill align-items-center p-2 gap-3 border-bottom border-header mb-2" data-bs-toggle="collapse" href="#UNO" role="button" aria-expanded="false" aria-controls="UNO">
+                <img class="" src="./src/assets/img/gas.png" width="50" alt="">
+                <div>
+                    <h3 class="p-0">Repsol</h3>
+                    <p class="mb-0 fs-5">Avenida de valencia</p>
+                </div>
+                <p class="ms-auto mb-0 price fs-2">1.939 <span class="fs-6">€/L</span></p>
+            </article>
+            <article class="collapse" id="UNO">
+                <div class="card card-body">
+                    <p>Horario <span>L-D: 07:00-22:00</span></p>
+                    <span class="badge bg-green col-2">Abierto</span>
+                </div>
+              </article>
+              <article class="d-flex flex-fill align-items-center p-2 gap-3 border-bottom border-header mb-2" data-bs-toggle="collapse" href="#DOS" role="button" aria-expanded="false" aria-controls="DOS">
+                <img class="" src="./src/assets/img/gas.png" width="50" alt="">
+                <div>
+                    <h3 class="p-0">Repsol</h3>
+                    <p class="mb-0 fs-5">Avenida de valencia</p>
+                </div>
+                <p class="ms-auto mb-0 price fs-2">1.939 <span class="fs-6">€/L</span></p>
+            </article>
+            <article class="collapse" id="DOS">
+                <div class="card card-body">
+                    <p>Horario <span>L-D: 07:00-22:00</span></p>
+                    <span class="badge bg-green col-2">Abierto</span>
+                </div>
+              </article>
+              <article class="d-flex flex-fill align-items-center p-2 gap-3 border-bottom border-header mb-2" data-bs-toggle="collapse" href="#TRES" role="button" aria-expanded="false" aria-controls="TRES">
+                <img class="" src="./src/assets/img/gas.png" width="50" alt="">
+                <div>
+                    <h3 class="p-0">Repsol</h3>
+                    <p class="mb-0 fs-5">Avenida de valencia</p>
+                </div>
+                <p class="ms-auto mb-0 price fs-2">1.939 <span class="fs-6">€/L</span></p>
+            </article>
+            <article class="collapse" id="TRES">
+                <div class="card card-body">
+                    <p>Horario <span>L-D: 07:00-22:00</span></p>
+                    <span class="badge bg-green col-2">Abierto</span>
+                </div>
+              </article>
+        </section>
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>

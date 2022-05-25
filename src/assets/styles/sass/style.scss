@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'ds-digital';
+    src: url('../../font/DS-DIGIB.TTF');
+    font-weight: 400;
+}
+
+@import '../../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+$header: #14248a;
+$red: #C20114;
+$green: #04F06A;
+
+$theme-colors: (
+    "header": $header,
+    "red": $red,
+    "green": $green,
+
+    ) !default;
+@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.price {
+    font-family: 'ds-digital';
+    font-size: 1.5rem;
+}
